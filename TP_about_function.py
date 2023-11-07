@@ -195,32 +195,65 @@ script_funct()
 
 
 
-"""
+
 
 # function for decripting... 
 import string 
-def my_function_inverse_script("0-11-14"):
+def my_function_inverse_script(param = "0-11-14"):
+	result = ""
+	parameter = param.split("-")
 	alpha = string.ascii_lowercase
-	for val in alpha:
-		if 
+	for val in parameter:
+		if val.isdigit():
+			result += alpha[int(val)]
+		else:
+			continue
 
-"""
+	print(result)
 	
+#calling... 
+my_function_inverse_script()
+
+
+
+
+
+# funcion taking two parameters and returns in tuple both values permitted
+def change_function(val = "First", val1 = "Second"):
+	var_buf = val
+	val = val1
+	val1 = var_buf
+	ret = tuple((val, val1))
+	
+	return ret
+
+
+#calling...
+print(change_function())
 
 
 
 
 
 
+# function that takes a name and... 
+def name_function(name = "Jean-Daniel Florestal"):
+	final_value = ""
+	t = "-"
+	name_cor = ""
+	if t in name:
+		name_cor = name.replace("-", " ")
+	else:
+		name_cor = name
+	name_split = name_cor.split()
+	
+	for each in name_split:
+		final_value += each[0]
+	
+	print(final_value)
 
 
-
-
-
-
-
-
-
+name_function()
 
 
 
